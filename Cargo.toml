@@ -1,4 +1,9 @@
+[workspace.package]
+repository = "https://github.com/rust-vmm/rust-vmm"
+
 [workspace]
 members = [
   "rust-vmm",
+  "vmm-sys-util",
 ]
+resolver = "2"
