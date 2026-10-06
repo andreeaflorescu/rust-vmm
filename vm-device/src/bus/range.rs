@@ -72,7 +72,7 @@ impl<A: BusAddress> Eq for BusRange<A> {}
 
 impl<A: BusAddress> PartialOrd for BusRange<A> {
     fn partial_cmp(&self, other: &BusRange<A>) -> Option<Ordering> {
-        self.base.partial_cmp(&other.base)
+        Some(self.cmp(other))
     }
 }
 

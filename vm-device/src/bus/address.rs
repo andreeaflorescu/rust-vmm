@@ -56,7 +56,7 @@ impl Eq for MmioAddress {}
 
 impl PartialOrd for MmioAddress {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        self.0.partial_cmp(&other.0)
+        Some(self.cmp(other))
     }
 }
 
@@ -106,7 +106,7 @@ impl Eq for PioAddress {}
 
 impl PartialOrd for PioAddress {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        self.0.partial_cmp(&other.0)
+        Some(self.cmp(other))
     }
 }
 
