@@ -6,9 +6,9 @@
 //! This crate provides:
 //! * device traits defining read and write operations on specialized buses
 //! * device manager (bus-specific traits and a concrete implementation) for
-//! operating devices and dispatching I/O
+//!   operating devices and dispatching I/O
 //! * abstractions for defining resources and their constraints (e.g. a specific bus
-//! address range, IRQ number, etc)
+//!   address range, IRQ number, etc)
 //!
 //! [`MutDevicePio`] and [`MutDeviceMmio`] traits help with composite inner mutability
 //! (i.e. if we have a `Mutex` that holds a `T` which implements [`MutDevicePio`],

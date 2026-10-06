@@ -307,7 +307,7 @@ impl IoManager {
     ///
     /// * `device`: device instance object to be registered
     /// * `resources`: resources that this device owns, might include
-    ///                port I/O and memory-mapped I/O ranges, irq number, etc.
+    ///   port I/O and memory-mapped I/O ranges, irq number, etc.
     pub fn register_mmio_resources(
         &mut self,
         device: Arc<dyn DeviceMmio + Send + Sync>,
@@ -337,7 +337,7 @@ impl IoManager {
     ///
     /// * `device`: device instance object to be registered
     /// * `resources`: resources that this device owns, might include
-    ///                port I/O and memory-mapped I/O ranges, irq number, etc.
+    ///   port I/O and memory-mapped I/O ranges, irq number, etc.
     pub fn register_pio_resources(
         &mut self,
         device: Arc<dyn DevicePio + Send + Sync>,
@@ -367,7 +367,7 @@ impl IoManager {
     ///
     /// * `device`: device instance object to be registered
     /// * `resources`: resources that this device owns, might include
-    ///                port I/O and memory-mapped I/O ranges, irq number, etc.
+    ///   port I/O and memory-mapped I/O ranges, irq number, etc.
     pub fn register_resources<T: DeviceMmio + DevicePio + 'static + Send + Sync>(
         &mut self,
         device: Arc<T>,
@@ -385,7 +385,7 @@ impl IoManager {
     /// # Arguments
     ///
     /// * `resources`: resources that this device owns, might include
-    ///                port I/O and memory-mapped I/O ranges, irq number, etc.
+    ///   port I/O and memory-mapped I/O ranges, irq number, etc.
     pub fn deregister_resources(&mut self, resources: &[Resource]) -> usize {
         let mut count = 0;
         for res in resources.iter() {
