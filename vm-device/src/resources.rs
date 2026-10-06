@@ -12,8 +12,6 @@
 //! 5) the VMM registers the new device onto corresponding device managers according the allocated
 //!    resources.
 
-use std::{u16, u32, u64};
-
 /// Enumeration describing a device's resource constraints.
 pub enum ResourceConstraint {
     /// Constraint for an IO Port address range.

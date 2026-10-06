@@ -98,10 +98,10 @@ mod tests {
 
         assert_eq!(BusRange::new(base_zero, 0), Err(Error::InvalidRange));
 
-        assert!(BusRange::new(base_zero, std::u64::MAX).is_ok());
-        assert!(BusRange::new(MmioAddress(1), std::u64::MAX).is_ok());
+        assert!(BusRange::new(base_zero, u64::MAX).is_ok());
+        assert!(BusRange::new(MmioAddress(1), u64::MAX).is_ok());
         assert_eq!(
-            BusRange::new(MmioAddress(2), std::u64::MAX),
+            BusRange::new(MmioAddress(2), u64::MAX),
             Err(Error::InvalidRange)
         );
 

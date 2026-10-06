@@ -172,7 +172,7 @@ mod tests {
 
     #[test]
     fn test_address_ops() {
-        check_bus_address_ops(MmioAddress(0), std::u64::MAX);
-        check_bus_address_ops(PioAddress(0), std::u16::MAX);
+        check_bus_address_ops(MmioAddress(0), u64::MAX);
+        check_bus_address_ops(PioAddress(0), u16::MAX);
     }
 }
